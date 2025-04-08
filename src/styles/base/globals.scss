@@ -1,0 +1,32 @@
+@use "../utils/utils" as *;
+
+:root {
+  --header-height: 0px;
+}
+
+body {
+  @include ProximaNovaCondensedRegular;
+  background: $white;
+  color: $text-color;
+  overflow-x: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1250px;
+  width: 100%;
+  position: relative;
+
+  @include media(1280.98, "max") {
+    max-width: 940px;
+  }
+
+  @include media(992.98, "max") {
+    max-width: 100%;
+    padding: 0 25px;
+  }
+
+  @include media(576.98, "max") {
+    padding: 0 15px;
+  }
+}

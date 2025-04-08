@@ -1,0 +1,127 @@
+@use "../utils/utils" as *;
+
+.gallery {
+  margin-bottom: 100px;
+  @include media(992.98, "max") {
+    margin-bottom: 50px;
+  }
+  // .gallery__wrapper
+  &__wrapper {
+    width: calc(100% - 140px);
+    margin: 0 auto;
+    position: relative;
+    @include media(992.98, "max") {
+      width: 100%;
+    }
+  }
+
+  // .gallery__title
+  &__title {
+    @include ProximaNovaCondensedSemibold;
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 48px;
+    @include media(992.98, "max") {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    @include media(576.98, "max") {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+  }
+
+  // .gallery__swiper-nav
+  &__swiper-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    height: 56px;
+    @include media(992.98, "max") {
+      display: none;
+    }
+  }
+
+  // .gallery-swiper__nav-next & gallery-swiper__nav-prev
+  &-swiper__nav-next,
+  &-swiper__nav-prev {
+    position: relative;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      width: 10px;
+      height: 20px;
+      background-image: url("../assets/images/icons/slide-arrow.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  // .gallery-swiper__nav-next
+  &-swiper__nav-next {
+    &::after {
+      transform: translate(-30%, -50%) rotate(180deg);
+    }
+  }
+
+  .gallery-swiper {
+    width: 100%;
+
+    // .gallery-swiper__wrapper
+    &__wrapper {
+    }
+
+    // .gallery-swiper__slide
+    &__slide {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    // .gallery-swiper__pagination
+    &__pagination {
+      position: relative;
+      top: initial;
+      left: initial;
+      right: initial;
+      bottom: initial;
+      margin-top: 28px;
+      width: 100%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+
+      .swiper-pagination-bullet {
+        background: $black;
+        width: 100%;
+        border-radius: 0;
+        margin: 0;
+        height: 6px;
+        opacity: 0.1;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: $primary-color;
+        opacity: 1;
+      }
+    }
+  }
+}

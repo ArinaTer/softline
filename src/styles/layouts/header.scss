@@ -1,0 +1,70 @@
+@use "../utils/utils" as *;
+
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+
+  // .header__wrapper
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d9d9d9;
+    background: $white;
+    padding: 28px 70px;
+    @include media(1280.98, "max") {
+      padding: 28px 30px;
+    }
+    @include media(992.98, "max") {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    @include media(576.98, "max") {
+      padding: 16px 5px;
+    }
+  }
+  // .logo
+  .logo {
+    max-width: 125px;
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  // .nav
+  .nav {
+    // .nav__list
+    &__list {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @include media(992.98, "max") {
+        flex-wrap: wrap;
+        gap: 0px 10px;
+      }
+    }
+
+    // .nav__item
+    &__item {
+    }
+
+    // .nav__link
+    &__link {
+      @include ProximaNovaCondensedSemibold;
+      font-size: 18px;
+      line-height: 1.4;
+      @include media(575.98, "max") {
+        font-size: 14px;
+      }
+    }
+  }
+}

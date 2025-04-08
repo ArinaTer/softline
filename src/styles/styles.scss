@@ -1,0 +1,15 @@
+//Utils
+@use "./utils/utils";
+
+// Base
+@use "./base/normalize";
+@use "./base/globals";
+
+// Vendors
+@use "./vendors/swiper";
+
+// Layouts
+@use "./layouts/header";
+
+// Pages
+@use "./pages/home";

@@ -1,0 +1,111 @@
+@use "../utils/utils" as *;
+
+.hero {
+  margin-top: calc(79px + var(--header-height));
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 79px;
+  width: 100%;
+  height: 100%;
+
+  @include media(992.98, "max") {
+    margin-top: calc(30px + var(--header-height));
+    margin-bottom: 30px;
+  }
+
+  @include media(576.98, "max") {
+    margin-bottom: 50px;
+  }
+
+  // .hero__content
+  &__content {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include media(1280.98, "max") {
+      max-width: 800px;
+    }
+
+    @include media(992.98, "max") {
+      max-width: 100%;
+    }
+  }
+
+  // .hero__title
+  &__title {
+    @include ProximaNovaCondensedBlack;
+    font-size: 56px;
+    line-height: 1.1;
+    text-align: center;
+    margin-bottom: 30px;
+    color: $primary-color;
+
+    @include media(992.98, "max") {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    @include media(576.98, "max") {
+      font-size: 28px;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+  }
+
+  // .hero__description
+  &__description {
+    font-size: 32px;
+    line-height: 1.22;
+    text-align: center;
+
+    @include media(992.98, "max") {
+      font-size: 24px;
+    }
+
+    @include media(576.98, "max") {
+      text-align: left;
+      font-size: 16px;
+    }
+  }
+
+  // .hero__stats
+  &__stats {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px 8px;
+
+    @include media(576.98, "max") {
+      margin-top: 50px;
+      display: flex;
+    }
+  }
+
+  // .hero__stats-item
+  &__stats-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    min-width: 150px;
+  }
+
+  // .hero__stats-number
+  &__stats-number {
+    @include ProximaNovaCondensedSemibold;
+    font-size: 40px;
+    line-height: 1.2;
+    color: $primary-color;
+    text-align: center;
+  }
+
+  // .hero__stats-text
+  &__stats-text {
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+  }
+}
