@@ -1,52 +1,52 @@
-@use '../utils/mixins' as *;
+@use "../utils/mixins" as *;
 
-// // ProximaNova
+// ProximaNova
 @include font-face(
-  'ProximaNovaRegular',
-  '../assets/fonts/ProximaNova/ProximaNova-Regular'
+  "proxima-nova-regular",
+  "../assets/fonts/ProximaNova/ProximaNova-Regular"
+);
+@include font-face(
+  "proxima-nova-semibold",
+  "../assets/fonts/ProximaNova/ProximaNova-Semibold"
+);
+@include font-face(
+  "proxima-nova-condensed-black",
+  "../assets/fonts/ProximaNova/ProximaNovaCondensed-Black"
+);
+@include font-face(
+  "proxima-nova-condensed-bold",
+  "../assets/fonts/ProximaNova/ProximaNovaCondensed-Bold"
+);
+@include font-face(
+  "proxima-nova-condensed-regular",
+  "../assets/fonts/ProximaNova/ProximaNovaCondensed-Regular"
+);
+@include font-face(
+  "proxima-nova-condensed-semibold",
+  "../assets/fonts/ProximaNova/ProximaNovaCondensed-Semibold"
 );
 
-@include font-face(
-  'ProximaNovaSemibold',
-  '../assets/fonts/ProximaNova/ProximaNova-Semibold'
-);
-@include font-face(
-  'ProximaNovaCondensedBlack',
-  '../assets/fonts/ProximaNova/ProximaNovaCondensed-Black'
-);
-@include font-face(
-  'ProximaNovaCondensedBold',
-  '../assets/fonts/ProximaNova/ProximaNovaCondensed-Bold'
-);
-@include font-face(
-  'ProximaNovaCondensedRegular',
-  '../assets/fonts/ProximaNova/ProximaNovaCondensed-Regular'
-);
-@include font-face(
-  'ProximaNovaCondensedSemibold',
-  '../assets/fonts/ProximaNova/ProximaNovaCondensed-Semibold'
-);
-
-// // ProximaNova
-@mixin ProximaNovaRegular {
-  font-family: 'ProximaNovaRegular', Arial, sans-serif;
-}
-@mixin ProximaNova-Semibold {
-  font-family: 'ProximaNova-Semibold', Arial, sans-serif;
-}
-@mixin ProximaNovaCondensedBlack {
-  font-family: 'ProximaNovaCondensedBlack', Arial, sans-serif;
-}
-@mixin ProximaNovaCondensedBold {
-  font-family: 'ProximaNovaCondensedBold', Arial, sans-serif;
-}
-@mixin ProximaNovaCondensedRegular {
-  font-family: 'ProximaNovaCondensedRegular', Arial, sans-serif;
-}
-@mixin ProximaNovaCondensedSemibold {
-  font-family: 'ProximaNovaCondensedSemibold', Arial, sans-serif;
+// ProximaNova
+@mixin proxima-nova-regular {
+  font-family: proxima-nova-regular, Arial, sans-serif;
 }
 
-@mixin Arial {
-  font-family: Arial, sans-serif;
+@mixin proxima-nova-semibold {
+  font-family: proxima-nova-semibold, Arial, sans-serif;
+}
+
+@mixin proxima-nova-condensed-black {
+  font-family: proxima-nova-condensed-black, Arial, sans-serif;
+}
+
+@mixin proxima-nova-condensed-bold {
+  font-family: proxima-nova-condensed-bold, Arial, sans-serif;
+}
+
+@mixin proxima-nova-condensed-regular {
+  font-family: proxima-nova-condensed-regular, Arial, sans-serif;
+}
+
+@mixin proxima-nova-condensed-semibold {
+  font-family: proxima-nova-condensed-semibold, Arial, sans-serif;
 }

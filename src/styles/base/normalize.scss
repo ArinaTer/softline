@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
 }
@@ -20,7 +20,7 @@ body {
   color: #222;
   background-color: #fff;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+  text-rendering: optimizelegibility;
 }
 
 ul,

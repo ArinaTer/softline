@@ -1,4 +1,4 @@
-//Utils
+// Utils
 @use "./utils/utils";
 
 // Base
@@ -8,8 +8,8 @@
 // Vendors
 @use "./vendors/swiper";
 
-// Layouts
-@use "./layouts/header";
+// Blocks
+@use "./blocks/header";
 
 // Pages
 @use "./pages/home";

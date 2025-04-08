@@ -2,21 +2,25 @@
 
 .business-directions {
   margin-bottom: 100px;
+
   @include media(992.98, "max") {
     margin-bottom: 50px;
   }
 
   // .business-directions__title
   &__title {
-    @include ProximaNovaCondensedSemibold;
+    @include proxima-nova-condensed-semibold;
+
     font-size: 56px;
     line-height: 1.2;
     text-align: center;
     margin-bottom: 50px;
+
     @include media(992.98, "max") {
       font-size: 40px;
       margin-bottom: 20px;
     }
+
     @include media(576.98, "max") {
       font-size: 28px;
       margin-bottom: 10px;
@@ -27,8 +31,8 @@
   &__cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 22px;
+    grid-gap: 22px 20px;
+
     @include media(992.98, "max") {
       grid-template-columns: 1fr;
     }
@@ -39,15 +43,24 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    @include media(992.98, "max") {
-    }
+    height: 260px;
+    cursor: pointer;
 
-    &.active {
-      @include media(992.98, "max") {
-      }
+    @include media(992.98, "max") {
+      height: 100%;
     }
 
     @media (hover: hover) {
+      &:hover {
+        .business-directions__card-overlay {
+          height: 100%;
+        }
+
+        .business-directions__card-content {
+          opacity: 1;
+          height: 165px;
+        }
+      }
     }
   }
 
@@ -57,8 +70,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 240px;
+    height: 100%;
     z-index: -1;
+
+    @include media(992.98, "max") {
+      height: 240px;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -68,31 +86,41 @@
 
   // .business-directions__card-overlay
   &__card-overlay {
-    background: rgba(45, 54, 83, 0.6);
+    background: rgb(45 54 83 / 60%);
+    position: absolute;
+    bottom: 0;
+    transition: all 0.6s;
+    height: 80px;
+
+    @include media(992.98, "max") {
+      position: relative;
+      bottom: initial;
+      height: initial;
+    }
   }
 
   // .business-directions__card-header
   &__card-header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     cursor: pointer;
     padding: 28px 20px 5px;
-    @include media(992.98, "max") {
-    }
   }
 
   // .business-directions__card-arrow
   &__card-arrow {
     display: none;
+    width: 20px;
+    height: 20px;
+    background: url("../assets/images/icons/business-directions-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.3s ease;
+
     @include media(992.98, "max") {
       display: block;
-      width: 20px;
-      height: 20px;
-      background: url("../assets/images/icons/business-directions-arrow.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: contain;
-      transition: transform 0.3s ease;
     }
   }
 
@@ -103,27 +131,27 @@
     height: 20px;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.3s;
+    transition: all 0.6s;
 
     .active & {
       opacity: 1;
       height: 165px;
-      // padding-bottom: 20px;
     }
   }
 
   // .business-directions__card-title
   &__card-title {
-    @include ProximaNovaCondensedSemibold;
+    @include proxima-nova-condensed-semibold;
+
     font-weight: 600;
     font-size: 24px;
     line-height: 1.3;
     color: $white;
+
     @include media(1280.98, "max") {
       font-size: 22px;
     }
-    @include media(992.98, "max") {
-    }
+
     @include media(576.98, "max") {
       font-size: 20px;
       line-height: 100%;
@@ -136,8 +164,6 @@
     line-height: 1.4;
     color: $white;
 
-    @include media(992.98, "max") {
-    }
     @include media(576.98, "max") {
       font-size: 16px;
     }

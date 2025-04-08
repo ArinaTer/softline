@@ -1,10 +1,7 @@
 @use "../utils/utils" as *;
 
 .hero {
-  margin-top: calc(79px + var(--header-height));
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 79px;
+  margin: calc(79px + var(--header-height)) auto 79px;
   width: 100%;
   height: 100%;
 
@@ -34,7 +31,8 @@
 
   // .hero__title
   &__title {
-    @include ProximaNovaCondensedBlack;
+    @include proxima-nova-condensed-bold;
+
     font-size: 56px;
     line-height: 1.1;
     text-align: center;
@@ -95,7 +93,8 @@
 
   // .hero__stats-number
   &__stats-number {
-    @include ProximaNovaCondensedSemibold;
+    @include proxima-nova-condensed-semibold;
+
     font-size: 40px;
     line-height: 1.2;
     color: $primary-color;

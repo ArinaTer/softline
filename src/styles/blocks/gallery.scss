@@ -2,14 +2,17 @@
 
 .gallery {
   margin-bottom: 100px;
+
   @include media(992.98, "max") {
     margin-bottom: 50px;
   }
+
   // .gallery__wrapper
   &__wrapper {
     width: calc(100% - 140px);
     margin: 0 auto;
     position: relative;
+
     @include media(992.98, "max") {
       width: 100%;
     }
@@ -17,14 +20,17 @@
 
   // .gallery__title
   &__title {
-    @include ProximaNovaCondensedSemibold;
+    @include proxima-nova-condensed-semibold;
+
     font-size: 56px;
     line-height: 1.1;
     margin-bottom: 48px;
+
     @include media(992.98, "max") {
       font-size: 40px;
       margin-bottom: 30px;
     }
+
     @include media(576.98, "max") {
       font-size: 28px;
       margin-bottom: 15px;
@@ -41,6 +47,7 @@
     right: 0;
     width: auto;
     height: 56px;
+
     @include media(992.98, "max") {
       display: none;
     }
@@ -80,10 +87,6 @@
 
   .gallery-swiper {
     width: 100%;
-
-    // .gallery-swiper__wrapper
-    &__wrapper {
-    }
 
     // .gallery-swiper__slide
     &__slide {

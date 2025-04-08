@@ -2,7 +2,6 @@ const path = require("path");
 const glob = require("glob");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const StylelintPlugin = require('stylelint-webpack-plugin');
 
 const pages = glob.sync("./src/views/pages/*.hbs");
 const htmlPlugins = pages.map((templatePath) => {
@@ -56,10 +55,6 @@ module.exports = {
     ...htmlPlugins,
     new MiniCssExtractPlugin({
       filename: "assets/styles/styles.css",
-    }),
-    new StylelintPlugin({
-      files: '**/*.scss',
-      failOnError: false,
     }),
   ],
   devServer: {

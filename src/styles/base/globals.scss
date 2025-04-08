@@ -5,7 +5,8 @@
 }
 
 body {
-  @include ProximaNovaCondensedRegular;
+  @include proxima-nova-condensed-regular;
+
   background: $white;
   color: $text-color;
   overflow-x: hidden;

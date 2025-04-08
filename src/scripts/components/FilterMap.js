@@ -2,7 +2,7 @@ import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 gsap.registerPlugin(Draggable);
 
-export function FilterMap() {
+export function filterMap() {
     const elements = {
         media: document.querySelector('.map__media'),
         buttons: document.querySelectorAll('.map__nav-button'),
